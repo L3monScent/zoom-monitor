@@ -1,23 +1,23 @@
 name: Zoom Status Check
 
 on:
-    schedule:
+  schedule:
     - cron: '*/30 * * * *' # every 30 minutes
 
-    jobs:
-        check-zoom:
-            runs-on: ubuntu-latest
-            steps:
-                - name: Checkout code
-                  uses: actions/checkout@v3
+jobs:
+    check-zoom:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout code
+              uses: actions/checkout@v3
 
-                - name: Set up Python
-                  uses: actions/setup-python@v4
-                  with:
-                    python-version: '3.11'
+            - name: Set up Python
+              uses: actions/setup-python@v4
+              with:
+                python-version: '3.11'
 
-                - name: Install dependencies
-                  run: pip install requests
+            - name: Install dependencies
+              run: pip install requests
 
-                - name: Run Zoom monitor
-                  run: python zoom_monitor.py
+            - name: Run Zoom monitor
+              run: python zoom_monitor.py
