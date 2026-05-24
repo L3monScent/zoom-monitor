@@ -2,7 +2,7 @@ name: Zoom Status Check
 
 on:
     schedule
-    - cron: '*/30 * * * *' # every 30 minutes
+    -cron: '*/30 * * * *' # every 30 minutes
 
     jobs:
         check-zoom:
