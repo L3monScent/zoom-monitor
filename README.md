@@ -2,16 +2,14 @@
 Checks the Public Zoom Service Status API and returns the status of each component. Runnable localy, as as Docker container, or as a Kubernetes job
 
 ## Run Locally
-'''bash
+```bash
 python zoom_monitor.py
 
 ### Docker
-'''bash
 docker built -t zoom-monitor .
 docker run zoom-monitor
 
 #### Kubernetes
-'''bash
 kubectl apply -f zoom-job.yml
 kubectl logs jobs/zoom-status-check
 
