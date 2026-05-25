@@ -1,0 +1,12 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+   name: zoom-status-check
+spec:
+  template:
+     spec:
+       containers:
+         - name: zoom-monitor
+           image: zoom-monitor
+           command: ["python", "zoom_monitor.py"]
+       restartPolicy: Never
