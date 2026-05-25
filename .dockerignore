@@ -1,0 +1,6 @@
+#Tells Docker to Ignore the below files when building the image
+
+.git
+.vscode
+.github
+README.md
